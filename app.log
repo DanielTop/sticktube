@@ -1,0 +1,81 @@
+
+> stiktube@0.1.0 dev
+> next dev
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/larry/t/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/larry/t/stiktube/package-lock.json
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.3.5:3000
+- Environments: .env
+
+✓ Starting...
+✓ Ready in 520ms
+⚠ Cross origin request detected from 684afe912c7c.ngrok-free.app to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 803ms (compile: 212ms, render: 591ms)
+ GET / 200 in 321ms (compile: 2ms, render: 319ms)
+ GET / 200 in 280ms (compile: 1787µs, render: 278ms)
+ GET / 200 in 223ms (compile: 5ms, render: 218ms)
+⨯ upstream image response failed for https://img.youtube.com/vi/SXHMnicI6Pg/hqdefault.jpg 404
+ GET /watch/cmjxjil1z000ffnn51qlx56yb 200 in 777ms (compile: 565ms, render: 212ms)
+⨯ upstream image response failed for https://img.youtube.com/vi/SXHMnicI6Pg/hqdefault.jpg 404
+⨯ upstream image response failed for https://img.youtube.com/vi/SXHMnicI6Pg/hqdefault.jpg 404
+ GET /api/auth/session 200 in 555ms (compile: 516ms, render: 39ms)
+ GET /api/auth/session 200 in 10ms (compile: 4ms, render: 7ms)
+ GET /api/auth/session 200 in 10ms (compile: 1574µs, render: 9ms)
+ GET /api/auth/session 200 in 14ms (compile: 2ms, render: 11ms)
+ GET /api/auth/session 200 in 9ms (compile: 2ms, render: 7ms)
+ GET /api/videos/cmjxjil1z000ffnn51qlx56yb/comments 200 in 518ms (compile: 513ms, render: 5ms)
+ GET /api/auth/session 200 in 9ms (compile: 3ms, render: 6ms)
+ GET /api/auth/session 200 in 7ms (compile: 1402µs, render: 6ms)
+ GET /api/auth/session 200 in 30ms (compile: 12ms, render: 18ms)
+ GET /api/auth/session 200 in 18ms (compile: 6ms, render: 12ms)
+ GET /api/auth/session 200 in 26ms (compile: 12ms, render: 14ms)
+ GET /api/auth/session 200 in 8ms (compile: 2ms, render: 5ms)
+ GET /api/auth/session 200 in 9ms (compile: 1229µs, render: 8ms)
+ GET /api/auth/session 200 in 30ms (compile: 11ms, render: 19ms)
+ GET /api/auth/session 200 in 8ms (compile: 2ms, render: 6ms)
+ GET /api/auth/session 200 in 21ms (compile: 8ms, render: 13ms)
+ GET /api/auth/session 200 in 7ms (compile: 1490µs, render: 5ms)
+ GET /api/auth/session 200 in 29ms (compile: 13ms, render: 15ms)
+ GET /api/auth/session 200 in 11ms (compile: 2ms, render: 8ms)
+ GET /api/auth/session 200 in 22ms (compile: 10ms, render: 12ms)
+ GET /api/auth/session 200 in 8ms (compile: 1846µs, render: 7ms)
+ GET /api/auth/session 200 in 27ms (compile: 12ms, render: 14ms)
+ GET /api/auth/session 200 in 8ms (compile: 2ms, render: 6ms)
+ GET / 200 in 64ms (compile: 7ms, render: 56ms)
+ GET /api/auth/session 200 in 37ms (compile: 9ms, render: 28ms)
+ GET /api/auth/session 200 in 6ms (compile: 1375µs, render: 4ms)
+ GET /api/auth/session 200 in 8ms (compile: 1731µs, render: 6ms)
+⨯ upstream image response timed out for https://img.youtube.com/vi/SXHMnicI6Pg/hqdefault.jpg
+ GET / 200 in 61ms (compile: 4ms, render: 57ms)
+ GET /api/auth/session 200 in 13ms (compile: 4ms, render: 8ms)
+ GET /api/auth/session 200 in 8ms (compile: 1324µs, render: 7ms)
+ GET /api/auth/session 200 in 9ms (compile: 1918µs, render: 7ms)
+ GET /api/auth/session 200 in 141ms (compile: 58ms, render: 83ms)
+ GET /api/auth/session 200 in 9ms (compile: 2ms, render: 6ms)
+ GET /api/auth/session 200 in 13ms (compile: 2ms, render: 11ms)
+ GET /watch/cmjxjtu7o0001fnzrm3igxxkg 200 in 106ms (compile: 12ms, render: 94ms)
+ GET /api/videos/cmjxjtu7o0001fnzrm3igxxkg/comments 200 in 13ms (compile: 8ms, render: 4ms)
+ GET /api/auth/session 200 in 26ms (compile: 4ms, render: 22ms)
+⨯ upstream image response failed for https://img.youtube.com/vi/SXHMnicI6Pg/hqdefault.jpg 404
+ GET /api/auth/session 200 in 20ms (compile: 7ms, render: 12ms)
+ GET /api/auth/session 200 in 8ms (compile: 3ms, render: 6ms)
+ GET /api/auth/session 200 in 8ms (compile: 1144µs, render: 7ms)
+ GET /api/auth/session 200 in 30ms (compile: 7ms, render: 23ms)
+ GET /api/auth/session 200 in 9ms (compile: 1254µs, render: 8ms)
+ GET /api/auth/session 200 in 8ms (compile: 1043µs, render: 7ms)
+ GET /api/auth/session 200 in 23ms (compile: 6ms, render: 17ms)
+ GET /api/auth/session 200 in 24ms (compile: 5ms, render: 20ms)
+ GET /api/auth/session 200 in 16ms (compile: 3ms, render: 12ms)
+ GET /api/auth/session 200 in 75ms (compile: 28ms, render: 47ms)
+ GET /api/auth/session 200 in 19ms (compile: 7ms, render: 12ms)
+ GET /api/auth/session 200 in 25ms (compile: 9ms, render: 16ms)
+ GET /api/auth/session 200 in 11ms (compile: 4ms, render: 7ms)
+ GET /shorts 200 in 117ms (compile: 39ms, render: 78ms)
