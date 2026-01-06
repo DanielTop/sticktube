@@ -81,3 +81,4 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /shorts 200 in 117ms (compile: 39ms, render: 78ms)
 ✓ Compiled in 68ms
 ✓ Compiled in 18ms
+✓ Compiled in 3ms

@@ -34,9 +34,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     ...(isAdmin ? [{ href: "/studio/admin", icon: Shield, label: "Админ" }] : []),
   ] : []
 
+  // Свернутый sidebar (маленький)
   if (!isOpen) {
     return (
-      <aside className="fixed left-0 top-14 z-40 hidden w-[72px] flex-col bg-neutral-900 md:flex h-[calc(100vh-56px)]">
+      <aside className="fixed left-0 top-14 z-40 hidden w-[72px] flex-col bg-neutral-900 md:flex h-[calc(100vh-56px)] border-r border-neutral-800">
         <div className="flex flex-col items-center gap-1 py-2">
           <Link
             href="/"
@@ -98,7 +99,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       />
 
       {/* Sidebar */}
-      <aside className="fixed left-0 top-14 z-50 flex w-60 flex-col bg-neutral-900 h-[calc(100vh-56px)]">
+      <aside className="fixed left-0 top-14 z-50 flex w-60 flex-col bg-neutral-900 h-[calc(100vh-56px)] border-r border-neutral-800">
         <ScrollArea className="flex-1 px-2">
           {/* Main links */}
           <div className="py-2">

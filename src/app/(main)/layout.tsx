@@ -10,6 +10,7 @@ export default function MainLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Начинаем с открытого sidebar - это избегает мерцания
   const [sidebarOpen, setSidebarOpen] = useState(true)
 
   return (
@@ -18,8 +19,8 @@ export default function MainLayout({
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <main
         className={cn(
-          "pt-14 transition-all duration-200",
-          sidebarOpen ? "md:ml-60" : "md:ml-[72px]"
+          "pt-14 transition-all duration-200 md:ml-60",
+          !sidebarOpen && "md:ml-[72px]"
         )}
       >
         {children}
