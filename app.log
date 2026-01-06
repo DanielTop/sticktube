@@ -79,3 +79,4 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /api/auth/session 200 in 25ms (compile: 9ms, render: 16ms)
  GET /api/auth/session 200 in 11ms (compile: 4ms, render: 7ms)
  GET /shorts 200 in 117ms (compile: 39ms, render: 78ms)
+✓ Compiled in 68ms
