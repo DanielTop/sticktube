@@ -39,24 +39,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     ...(isAdmin ? [{ href: "/studio/admin", icon: Shield, label: "Админ" }] : []),
   ] : []
 
-  // Не рендерим до гидратации чтобы избежать мерцания
+  // Skeleton - узкий sidebar до гидратации
   if (!mounted) {
     return (
-      <aside className="fixed left-0 top-14 z-40 hidden w-60 flex-col bg-neutral-900 md:flex h-[calc(100vh-56px)] border-r border-neutral-800">
-        <div className="flex-1 overflow-y-auto px-2">
-          <div className="py-2">
-            <div className="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-neutral-400">
-              <Home className="h-5 w-5" />
-              Главная
-            </div>
-            <div className="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-neutral-400">
-              <Zap className="h-5 w-5" />
-              Shorts
-            </div>
+      <aside className="fixed left-0 top-14 z-40 hidden w-[72px] flex-col bg-neutral-900 md:flex h-[calc(100vh-56px)] border-r border-neutral-800">
+        <div className="flex flex-col items-center gap-1 py-2">
+          <div className="flex flex-col items-center justify-center w-16 h-16 rounded-lg text-[10px] text-neutral-400">
+            <Home className="h-6 w-6 mb-1" />
+            Главная
           </div>
-          <Separator className="bg-neutral-800" />
-          <div className="py-4 px-3">
-            <p className="text-xs text-neutral-500">StikTube © 2025</p>
+          <div className="flex flex-col items-center justify-center w-16 h-16 rounded-lg text-[10px] text-neutral-400">
+            <Zap className="h-6 w-6 mb-1" />
+            Shorts
           </div>
         </div>
       </aside>

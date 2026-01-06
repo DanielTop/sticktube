@@ -10,8 +10,8 @@ export default function MainLayout({
 }: {
   children: React.ReactNode
 }) {
-  // Начинаем с открытого sidebar - это избегает мерцания
-  const [sidebarOpen, setSidebarOpen] = useState(true)
+  // Начинаем с закрытого (узкого) sidebar
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <div className="min-h-screen bg-neutral-950 text-white">
@@ -19,8 +19,8 @@ export default function MainLayout({
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <main
         className={cn(
-          "pt-14 transition-all duration-200 md:ml-60",
-          !sidebarOpen && "md:ml-[72px]"
+          "pt-14 transition-all duration-200 md:ml-[72px]",
+          sidebarOpen && "md:ml-60"
         )}
       >
         {children}
