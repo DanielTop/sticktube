@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useSession } from "next-auth/react"
@@ -9,7 +10,6 @@ import {
   Shield,
   Zap,
 } from "lucide-react"
-import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
 
@@ -21,6 +21,11 @@ interface SidebarProps {
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname()
   const { data: session } = useSession()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const isAdmin = session?.user?.email?.includes("admin@stiktube")
 
@@ -33,6 +38,30 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { href: "/studio", icon: Video, label: "Студия" },
     ...(isAdmin ? [{ href: "/studio/admin", icon: Shield, label: "Админ" }] : []),
   ] : []
+
+  // Не рендерим до гидратации чтобы избежать мерцания
+  if (!mounted) {
+    return (
+      <aside className="fixed left-0 top-14 z-40 hidden w-60 flex-col bg-neutral-900 md:flex h-[calc(100vh-56px)] border-r border-neutral-800">
+        <div className="flex-1 overflow-y-auto px-2">
+          <div className="py-2">
+            <div className="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-neutral-400">
+              <Home className="h-5 w-5" />
+              Главная
+            </div>
+            <div className="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-neutral-400">
+              <Zap className="h-5 w-5" />
+              Shorts
+            </div>
+          </div>
+          <Separator className="bg-neutral-800" />
+          <div className="py-4 px-3">
+            <p className="text-xs text-neutral-500">StikTube © 2025</p>
+          </div>
+        </div>
+      </aside>
+    )
+  }
 
   // Свернутый sidebar (маленький)
   if (!isOpen) {
@@ -100,7 +129,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       {/* Sidebar */}
       <aside className="fixed left-0 top-14 z-50 flex w-60 flex-col bg-neutral-900 h-[calc(100vh-56px)] border-r border-neutral-800">
-        <ScrollArea className="flex-1 px-2">
+        <div className="flex-1 overflow-y-auto px-2">
           {/* Main links */}
           <div className="py-2">
             {mainLinks.map((link) => (
@@ -149,10 +178,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* Footer */}
           <div className="py-4 px-3">
             <p className="text-xs text-neutral-500">
-              StikTube &copy; 2025
+              StikTube © 2025
             </p>
           </div>
-        </ScrollArea>
+        </div>
       </aside>
     </>
   )
