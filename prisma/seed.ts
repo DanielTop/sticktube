@@ -85,14 +85,14 @@ const testVideos = [
 
 const testShorts = [
   {
-    youtubeId: 'SXHMnicI6Pg',
+    youtubeId: 'dQw4w9WgXcQ',
     title: 'Невероятный трюк! 🔥',
     description: 'Смотри до конца!',
     duration: 30,
     tags: 'shorts,viral,трюк',
   },
   {
-    youtubeId: 'ZZ5LpwO-An4',
+    youtubeId: 'jNQXAC9IVRw',
     title: 'Смешные коты 😹',
     description: 'Подборка смешных котов',
     duration: 45,
