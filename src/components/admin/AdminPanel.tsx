@@ -12,13 +12,13 @@ interface Channel {
   handle: string
   avatar: string | null
   fakeSubscribers: number
-  user: { name: string | null; email: string }
+  user: { name: string | null; email: string | null }
   _count: { subscribers: number; videos: number }
 }
 
 interface Subscription {
   id: string
-  user: { id: string; name: string | null; email: string }
+  user: { id: string; name: string | null; email: string | null }
   channel: { id: string; name: string }
   createdAt: Date
 }
@@ -26,7 +26,7 @@ interface Subscription {
 interface User {
   id: string
   name: string | null
-  email: string
+  email: string | null
   image: string | null
   _count: { subscriptions: number }
 }
@@ -226,7 +226,7 @@ export function AdminPanel({ channels, subscriptions, users }: AdminPanelProps) 
                   className="flex items-center justify-between p-3 rounded-lg bg-neutral-800"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="text-white">{sub.user.name || sub.user.email}</span>
+                    <span className="text-white">{sub.user.name || sub.user.email || "Unknown"}</span>
                     <span className="text-neutral-500">→</span>
                     <span className="text-blue-400">{sub.channel.name}</span>
                   </div>
@@ -259,12 +259,12 @@ export function AdminPanel({ channels, subscriptions, users }: AdminPanelProps) 
                   <Avatar>
                     <AvatarImage src={user.image || ""} />
                     <AvatarFallback className="bg-green-600">
-                      {(user.name || user.email)[0]}
+                      {(user.name || user.email || "U")[0]}
                     </AvatarFallback>
                   </Avatar>
                   <div>
                     <p className="text-white">{user.name || "Без имени"}</p>
-                    <p className="text-sm text-neutral-400">{user.email}</p>
+                    <p className="text-sm text-neutral-400">{user.email || "No email"}</p>
                   </div>
                 </div>
                 <div className="text-sm text-neutral-400">
